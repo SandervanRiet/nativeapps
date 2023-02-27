@@ -1,35 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(AppRoot());
-}
-
-class AppRoot extends StatelessWidget {
-  Widget build(BuildContext buildContext) => MaterialApp(
-        home: DefaultTabController(
-          length: 5,
-          child: Scaffold(
-            appBar: AppBar(
-              title: Text("vervoersmidellen"),
-              bottom: TabBar(
-                  labelColor: Colors.black,
-                  indicatorColor: Colors.black,
-                  tabs: [
-                    Tab( icon: Icon(Icons.directions_boat)),
-                    Tab( icon: Icon(Icons.directions_bike)),
-                    Tab(icon: Icon(Icons.directions_car)),
-                    Tab( icon: Icon(Icons.directions_train)),
-                    Tab( icon: Icon(Icons.directions_bus)),
-                  ]),
-            ),
-            body:
-                TabBarView(children: <Widget>[AppTree(), Scherm2(), Scherm3(),Scherm4(),Scherm5()]),
-          ),
-        ),
-      );
-}
-
-class AppTree extends StatelessWidget {
+class Scherm1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(child: Text("vanwege het formaat meestal voor het plezier gebruikt wordt; een schip komt vaker voor in de beroepsvaart. Maar dat is geen algemeen aanvaarde regel. Veel vissers verdienen hun brood met een relatief kleine vissersboot, mensen wonen of houden kantoor op een woonboot en voormalige beroepsvaartschepen worden - zeker in Nederland - nog vaak recreatief gebruikt."),);
   }

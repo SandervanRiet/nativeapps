@@ -35,7 +35,7 @@ class AppTreeState extends State<AppTree> {
 
   Widget build(BuildContext context) {
     List<Item> lijst = <Item>[rood, groen, blauw];
-    if (keuzeKleur!=rood) keuzeKleur = rood;
+    if (keuzeKleur==null) keuzeKleur = rood;
 
     return Column(
         children: <Widget>[
@@ -126,7 +126,7 @@ class AppTreeState extends State<AppTree> {
                 ),
                 onChanged: (tekstinvoer) {
                   tekst = tekstinvoer;
-                  tekst = true;
+
                 },
               ),
             ),

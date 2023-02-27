@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,11 +25,32 @@ class MijnStatefulWidget extends StatefulWidget {
 }
 
 class _MijnWidgetState extends State<MijnStatefulWidget> {
-  Color kleur = Colors.blue;
+  List<Color> kleuren = [Colors.blue, Colors.red, Colors.green, Colors.yellow, Colors.orange, Colors.purple];
+  Random gen = Random();
+  List<Color> usedKleuren=[];
+  late Color kleur;
+
+  @override
+  void initState() {
+    kleur = kleuren[gen.nextInt(kleuren.length)];
+    super.initState();
+  }
 
   void veranderKleur() {
-    setState(() { kleur==Colors.blue ? kleur = Colors.red : kleur = Colors.blue; });
-    print(kleur);
+    setState(() {
+      kleur = getKleur();
+    });
+  }
+
+  Color getKleur() {
+    if (kleuren.isEmpty){
+      kleuren=usedKleuren;
+      usedKleuren=[];
+    }
+    kleur = kleuren[gen.nextInt(kleuren.length)];
+    usedKleuren.add(kleur);
+    kleuren.remove(kleur);
+    return kleur;
   }
 
   Widget build(BuildContext context) {
