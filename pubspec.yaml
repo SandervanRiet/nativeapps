@@ -27,6 +27,9 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  audioplayers: ^2.0.0
+  permission_handler: ^10.2.0
+  audiotagger: ^2.2.1
   flutter:
     sdk: flutter
 
@@ -59,6 +62,15 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/bird1.jpg
+    - assets/images/kameleon.jpg
+    - assets/images/krokodil.jpg
+    - assets/images/python.jpg
+    - assets/images/mockingbirdCover.jpg
+    - assets/images/redhot.jpg
+    - assets/images/bohemian.jpg
+    - assets/audio/blackSummer.mp3
+    - assets/audio/bohemian.mp3
+    - assets/audio/mockingbird.mp3
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
